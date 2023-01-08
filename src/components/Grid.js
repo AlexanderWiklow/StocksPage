@@ -1,4 +1,21 @@
+import Card from "./Card";
+import { useEffect, useState } from "react";
+
 export default function GridComponent() {
+  const [stocks, setStocks] = useState([]);
+
+  const API_URL_REDDIT = "https://tradestie.com/api/v1/apps/reddit";
+
+  useEffect(() => {
+    const getStocks = async () => {
+      const stocksFromServer = await fetch(API_URL_REDDIT);
+      const stocks = await stocksFromServer.json();
+
+      setStocks(stocks);
+    };
+    getStocks();
+  }, []);
+
   return (
     <div className="row">
       <div className="side">
@@ -22,7 +39,16 @@ export default function GridComponent() {
       </div>
       <div className="main">
         <h2>TITLE HEADING</h2>
-        <h5>Title description</h5>
+        <h5>HERE</h5>
+        {stocks.map((stock) => (
+          <Card
+            key={stock.ticker}
+            ticker={stock.ticker}
+            comments={stock["no_of_comments"]}
+            sentiment_score={stock["sentiment_score"]}
+            sentiment={stock["sentiment"]}
+          />
+        ))}
         <div className="fakeimg" style={{ height: "200px" }}>
           Image
         </div>
