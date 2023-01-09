@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import GridComponent from "./components/Grid";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import "./styles/styles.css";
 // import { useEffect, useState } from "react";
 
@@ -11,9 +11,9 @@ import "./styles/styles.css";
 export default function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <GridComponent />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

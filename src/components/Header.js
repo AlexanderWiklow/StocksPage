@@ -17,10 +17,10 @@ export default function Header() {
 
       {/* <!-- Navigation Bar --> */}
       <div className="navbar">
+        {/* <a href="#">Link</a>
         <a href="#">Link</a>
         <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <a href="#">Link</a> */}
       </div>
     </>
   );

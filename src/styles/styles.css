@@ -6,6 +6,8 @@
 body {
   font-family: Arial;
   margin: 0;
+  background-color: #282c34;
+  color: white;
 }
 
 /* Header/logo Title */
@@ -68,7 +70,7 @@ body {
 .footer {
   padding: 25px;
   text-align: center;
-  background: #ddd;
+  background: rgb(38, 38, 38);
   /* bottom: -1rem; */
   /* background-color: green; */
   /* border-top:2px solid red; */
@@ -76,9 +78,43 @@ body {
 
   width: 100%;
   bottom: 0;
-  /* color: white;
-  font-size: 25px; */
+
+  color: black;
+  font-size: 25px;
 }
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #1abc9c; */
+}
+
+.grid-container {
+  margin: auto 0;
+  /* max-width: 60%; */
+  /* margin: 10rem; */
+  max-width: 1000px;
+}
+
+.bullish {
+  /* color: green; */
+  background-color: rgba(0, 128, 0, 0.457);
+  font-weight: bolder;
+}
+
+.bearish {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.367);
+}
+
+/* .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1abc9c;
+} */
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {

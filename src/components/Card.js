@@ -24,7 +24,7 @@ export default function Card({ ticker, comments, sentiment_score, sentiment }) {
     // console.log("stocks: ", stocks[0].ticker);
 
     return (
-        <>
+        <div >
             <h1>{ticker}</h1>
             <h1>{comments}</h1>
             <h1>{sentiment_score}</h1>
@@ -33,6 +33,6 @@ export default function Card({ ticker, comments, sentiment_score, sentiment }) {
             {/* {stocks.map((stock,i) => (
                 <h1>{stock.ticker}</h1>
             ))} */}
-        </>
+        </div>
     )
 }
